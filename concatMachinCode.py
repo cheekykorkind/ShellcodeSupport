@@ -41,6 +41,8 @@ def set_raw_machine_code(machine_code_list):
 
 if __name__ == "__main__":
     dump_result = exec_cmd(sys.argv)
-    result = extract_machine_code(dump_result, '<main>')
-    print(result[0]+'\n', result[1])
+    result1 = extract_machine_code(dump_result, '<main>')
+    result2 = extract_machine_code(dump_result, '<func>')
+    print(result1[0]+'\n', result1[1])
+    print(result2[0]+'\n', result2[1])
 
